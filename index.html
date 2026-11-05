@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="az">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PixelPress AZ · Azərbaycan və dünya xəbərləri</title>
+<meta name="description" content="PixelPress AZ: Azərbaycan və dünyadan qısa, aydın xəbərlər. Hər gün yeni karusellər.">
+<meta property="og:title" content="PixelPress AZ">
+<meta property="og:description" content="Azərbaycan və dünyadan qısa, aydın xəbərlər.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231e5bff'/%3E%3Ctext x='16' y='23' font-family='Arial' font-weight='900' font-size='20' fill='white' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4f6fb;--card:#fff;--ink:#0b1220;--muted:#5b6475;--line:#e3e7ef;--brand:#1e5bff;--chip:#eef2ff;--shadow:0 1px 2px rgba(11,18,32,.06),0 6px 20px rgba(11,18,32,.06)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0a0d14;--card:#121722;--ink:#eef1f7;--muted:#9aa3b5;--line:#232a38;--chip:#1a2340;--shadow:none}}
+:root[data-theme="dark"]{--bg:#0a0d14;--card:#121722;--ink:#eef1f7;--muted:#9aa3b5;--line:#232a38;--chip:#1a2340;--shadow:none}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Montserrat,system-ui,sans-serif}
+a{color:inherit}button,input{font-family:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px}
+header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:16px;height:64px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:900;font-size:20px;text-decoration:none}
+.logo i{width:34px;height:34px;background:var(--brand);display:grid;place-items:center;color:#fff;font-style:normal;font-size:20px}
+.logo b{color:var(--brand)}
+nav{display:flex;gap:4px;margin-left:8px}
+nav button,.topics button{border:0;background:none;color:var(--muted);font-weight:600;font-size:14px;padding:8px 12px;border-radius:999px;cursor:pointer}
+nav button.on{background:var(--ink);color:var(--bg)}
+.search{margin-left:auto;display:flex;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:0 14px;height:40px;width:240px}
+.search input{border:0;outline:0;background:none;color:var(--ink);font-size:14px;width:100%}
+.ig{font-weight:700;font-size:13px;text-decoration:none;background:var(--brand);color:#fff;padding:10px 14px;border-radius:999px;white-space:nowrap}
+.daystrip{display:flex;gap:8px;overflow-x:auto;padding:16px 0 4px;scrollbar-width:none}
+.daystrip button{flex:none;border:1px solid var(--line);background:var(--card);color:var(--ink);font-weight:600;font-size:13px;padding:8px 14px;border-radius:10px;cursor:pointer}
+.daystrip button.on{border-color:var(--brand);color:var(--brand)}
+.topics{display:flex;gap:4px;flex-wrap:wrap;margin:8px 0 0}
+.topics button{font-size:13px;border:1px solid var(--line);background:var(--card)}
+.topics button.on{border-color:var(--brand);color:var(--brand)}
+h1{font-size:28px;font-weight:900;margin:20px 0 4px}
+.sub{color:var(--muted);font-size:14px;margin:0 0 20px}
+.hero{display:grid;grid-template-columns:1.25fr 1fr;gap:20px;margin-bottom:28px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding-bottom:48px}
+.thumb{width:100%;aspect-ratio:4/5;overflow:hidden;background:#000;position:relative}
+.thumb img{position:absolute;top:0;left:0;height:100%;width:300%;max-width:none;display:block}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:var(--shadow);cursor:pointer;display:flex;flex-direction:column;transition:transform .15s}
+.card:hover{transform:translateY(-2px)}
+.card .meta{padding:12px 14px 14px;display:flex;flex-direction:column;gap:8px}
+.tags{display:flex;gap:6px;align-items:center;font-size:12px;font-weight:700;color:var(--muted)}
+.chip{background:var(--chip);color:var(--brand);padding:3px 8px;border-radius:6px}
+.time{margin-left:auto}
+.card h3{margin:0;font-size:15px;line-height:1.35}
+.feat{display:grid;grid-template-columns:minmax(0,384px) 1fr;background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow);cursor:pointer}
+.feat .meta{padding:24px;display:flex;flex-direction:column;gap:12px;justify-content:center}
+.feat h2{margin:0;font-size:26px;line-height:1.2;font-weight:900}
+.feat p{margin:0;color:var(--muted);font-size:14px;line-height:1.6;display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical;overflow:hidden}
+.side{display:flex;flex-direction:column;gap:12px}
+.row{display:flex;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px;cursor:pointer}
+.row .thumb{width:72px;flex:none;border-radius:8px}
+.row h4{margin:6px 0 0;font-size:14px;line-height:1.35}
+.modal{position:fixed;inset:0;background:rgba(5,8,14,.72);display:none;z-index:50;padding:24px;overflow:auto}
+.modal.open{display:block}
+.sheet{max-width:980px;margin:0 auto;background:var(--card);border-radius:18px;overflow:hidden;display:grid;grid-template-columns:1fr 1fr}
+.slider{position:relative;background:#000}
+.slider .thumb img{transition:transform .25s}
+.dots{position:absolute;bottom:12px;left:0;right:0;display:flex;justify-content:center;gap:6px}
+.dots span{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.45)}
+.dots span.on{background:#fff}
+.nav{position:absolute;top:50%;transform:translateY(-50%);border:0;width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.9);font-size:18px;cursor:pointer;color:#0b1220}
+.prev{left:10px}.next{right:10px}
+.article{padding:28px;display:flex;flex-direction:column;gap:14px;max-height:calc(100vh - 48px);overflow:auto}
+.article h2{margin:0;font-size:24px;line-height:1.25;font-weight:900}
+.article p{margin:0;line-height:1.7;font-size:15px}
+.src{font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:12px;display:flex;flex-direction:column;gap:6px}
+.share{align-self:flex-start;border:1px solid var(--line);background:var(--card);color:var(--ink);font-weight:600;font-size:13px;padding:8px 12px;border-radius:999px;cursor:pointer}
+.close{position:fixed;top:16px;right:20px;border:0;background:#fff;color:#0b1220;width:40px;height:40px;border-radius:50%;font-size:20px;cursor:pointer;z-index:60;display:none}
+.modal.open + .close{display:block}
+footer{border-top:1px solid var(--line);color:var(--muted);font-size:13px;padding:24px 0 40px}
+.empty{color:var(--muted);padding:40px 0;text-align:center;grid-column:1/-1}
+@media (max-width:980px){.grid{grid-template-columns:repeat(3,1fr)}.hero{grid-template-columns:1fr}.search{width:180px}}
+@media (max-width:720px){.grid{grid-template-columns:repeat(2,1fr);gap:12px}.bar{flex-wrap:wrap;height:auto;padding:10px 0;gap:10px}nav{order:3;width:100%;margin:0}.search{order:4;width:100%;margin:0}.ig{margin-left:auto}.feat{grid-template-columns:1fr}.feat h2{font-size:20px}.sheet{grid-template-columns:1fr;border-radius:0}.article{max-height:none}.modal{padding:0}h1{font-size:22px}.card h3{font-size:13px}}
+</style>
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="logo" href="./"><i>P</i><span>PixelPress<b>AZ</b></span></a>
+  <nav id="tabs"><button class="on" data-f="all">Hamısı</button><button data-f="Azərbaycan">Azərbaycan</button><button data-f="Dünya">Dünya</button></nav>
+  <label class="search"><input id="q" placeholder="Xəbər axtar…" aria-label="Axtarış"></label>
+  <a class="ig" href="https://instagram.com/pixelpressaz" target="_blank" rel="noopener">@pixelpressaz</a>
+</div></header>
+<main class="wrap">
+  <div class="daystrip" id="days"></div>
+  <div class="topics" id="topics"></div>
+  <h1 id="h1">Xəbərlər</h1>
+  <p class="sub" id="count">Yüklənir…</p>
+  <section class="hero" id="hero"></section>
+  <section class="grid" id="grid"></section>
+</main>
+<footer><div class="wrap">PixelPress AZ · Azərbaycan və dünyadan qısa, aydın xəbərlər · Mənbələr hər xəbərin altında göstərilir · Fotolar açıq lisenziyalı (Wikimedia Commons)</div></footer>
+<div class="modal" id="modal"><div class="sheet"><div class="slider"><div class="thumb"><img id="mimg" alt=""></div><button class="nav prev" id="prev" aria-label="Əvvəlki">‹</button><button class="nav next" id="next" aria-label="Növbəti">›</button><div class="dots" id="dots"></div></div><div class="article" id="art"></div></div></div>
+<button class="close" id="close" aria-label="Bağla">×</button>
+<script>
+const MON=['yanvar','fevral','mart','aprel','may','iyun','iyul','avqust','sentyabr','oktyabr','noyabr','dekabr'];
+const fmt=(d,short)=>{const [y,m,dd]=d.split('-');return `${+dd} ${short?MON[m-1].slice(0,3):MON[m-1]}`};
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let ALL=[],day=null,region='all',topic='all',q='';
+const img=(p,alt='')=>`<div class="thumb"><img src="${p.id}.jpg" alt="${esc(alt)}" loading="lazy"></div>`;
+const tags=p=>`<div class="tags"><span class="chip">${esc(p.region)}</span>${esc(p.topic)}<span class="time">${p.time}</span></div>`;
+function list(){return ALL.filter(p=>(q?true:p.date===day)&&(region==='all'||p.region===region)&&(topic==='all'||p.topic===topic)&&(!q||(p.title+' '+p.body.join(' ')).toLowerCase().includes(q)))}
+function render(){
+  const L=list();
+  document.getElementById('h1').textContent=q?`“${q}” üzrə nəticələr`:`${fmt(day)} xəbərləri`;
+  document.getElementById('count').textContent=`${L.length} xəbər · ${L.filter(p=>p.region==='Azərbaycan').length} Azərbaycan, ${L.filter(p=>p.region==='Dünya').length} Dünya`;
+  const hero=document.getElementById('hero'),grid=document.getElementById('grid');
+  if(!L.length){hero.innerHTML='';grid.innerHTML='<div class="empty">Heç nə tapılmadı</div>';return}
+  const [f,...rest]=L;
+  hero.innerHTML=`<div class="feat" data-id="${f.id}">${img(f,f.title)}<div class="meta">${tags(f)}<h2>${esc(f.title)}</h2><p>${esc(f.body.join(' '))}</p></div></div>
+  <div class="side">${rest.slice(0,4).map(p=>`<div class="row" data-id="${p.id}">${img(p)}<div>${tags(p)}<h4>${esc(p.title)}</h4></div></div>`).join('')}</div>`;
+  grid.innerHTML=rest.slice(4).map(p=>`<article class="card" data-id="${p.id}">${img(p,p.title)}<div class="meta">${tags(p)}<h3>${esc(p.title)}</h3></div></article>`).join('');
+}
+function bars(){
+  const days=[...new Set(ALL.map(p=>p.date))];
+  document.getElementById('days').innerHTML=days.map(d=>`<button data-d="${d}" class="${d===day?'on':''}">${fmt(d,1)}</button>`).join('');
+  const tops=['all',...new Set(ALL.map(p=>p.topic))];
+  document.getElementById('topics').innerHTML=tops.map(t=>`<button data-t="${t}" class="${t===topic?'on':''}">${t==='all'?'Bütün mövzular':esc(t)}</button>`).join('');
+}
+let cur=null,ix=0;
+function show(){document.getElementById('mimg').style.transform=`translateX(-${ix*100/3}%)`;document.getElementById('dots').innerHTML=[0,1,2].map(i=>`<span class="${i===ix?'on':''}"></span>`).join('')}
+function openP(id,push=true){cur=ALL.find(p=>p.id===id);if(!cur)return;ix=0;document.getElementById('mimg').src=`${cur.id}.jpg`;show();
+  document.getElementById('art').innerHTML=`${tags(cur)}<h2>${esc(cur.title)}</h2>${cur.body.map(l=>`<p>${esc(l)}</p>`).join('')}<div class="src"><span>Mənbə: ${esc(cur.src)}</span><span>Fotolar: ${esc(cur.credits)}</span><span>${fmt(cur.date)} 2026, ${cur.time}</span></div><button class="share" id="share">Linki kopyala</button>`;
+  document.getElementById('share').onclick=e=>{navigator.clipboard?.writeText(location.href);e.target.textContent='Kopyalandı ✓'};
+  document.getElementById('modal').classList.add('open');document.body.style.overflow='hidden';if(push)history.replaceState(null,'','#'+id)}
+function closeP(){document.getElementById('modal').classList.remove('open');document.body.style.overflow='';history.replaceState(null,'',location.pathname)}
+document.addEventListener('click',e=>{
+  const c=e.target.closest('[data-id]');if(c&&!e.target.closest('.modal'))return openP(c.dataset.id);
+  const d=e.target.closest('[data-d]');if(d){day=d.dataset.d;q='';document.getElementById('q').value='';bars();render();window.scrollTo({top:0,behavior:'smooth'})}
+  const t=e.target.closest('[data-t]');if(t){topic=t.dataset.t;bars();render()}
+});
+document.getElementById('prev').onclick=()=>{ix=(ix+2)%3;show()};
+document.getElementById('next').onclick=()=>{ix=(ix+1)%3;show()};
+document.getElementById('close').onclick=closeP;
+document.getElementById('modal').onclick=e=>{if(e.target.id==='modal')closeP()};
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeP();if(cur&&document.getElementById('modal').classList.contains('open')){if(e.key==='ArrowRight')document.getElementById('next').click();if(e.key==='ArrowLeft')document.getElementById('prev').click()}});
+document.getElementById('tabs').onclick=e=>{const b=e.target.closest('button');if(!b)return;region=b.dataset.f;[...e.currentTarget.children].forEach(x=>x.classList.toggle('on',x===b));render()};
+document.getElementById('q').oninput=e=>{q=e.target.value.trim().toLowerCase();render()};
+fetch('posts.json',{cache:'no-cache'}).then(r=>r.json()).then(d=>{ALL=d;day=ALL[0]?.date;bars();render();const h=location.hash.slice(1);if(h)openP(h,false)}).catch(()=>{document.getElementById('count').textContent='Xəbərləri yükləmək alınmadı.'});
+</script>
+</body>
+</html>
