@@ -25,6 +25,7 @@ TOKEN = os.environ.get("IG_ACCESS_TOKEN", "")
 MAX_PER_RUN = int(os.environ.get("MAX_PER_RUN") or 5)
 DRY = os.environ.get("DRY_RUN", "").lower() in ("1", "true", "yes")
 ONLY = os.environ.get("ONLY_ID", "").strip()
+DEFAULT_IG_USER_ID = "17841425341415868"  # @pixelpressaz (shown in the Meta app, 2026-11-11)
 KEEP_DAYS = 3  # published ig/<date>/ images older than this are removed from the tree
 
 
@@ -60,9 +61,11 @@ def call(method, url, params=None):
 
 def find_user():
     """Return (base_url, ig_user_id)."""
-    uid = os.environ.get("IG_USER_ID", "").strip()
+    uid = os.environ.get("IG_USER_ID", "").strip() or DEFAULT_IG_USER_ID
     fb = f"https://graph.facebook.com/{VER}"
     if uid:
+        me = call("GET", f"{fb}/{uid}", {"fields": "id,username"})
+        print(f"IG user: @{me.get('username')} {me.get('id')}")
         return fb, uid
     errs = []
     try:
