@@ -20,7 +20,7 @@ from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
 
 BAKU = ZoneInfo("Asia/Baku")
-VER = os.environ.get("GRAPH_VERSION") or "v26.0"
+VER = os.environ.get("GRAPH_VERSION") or "v27.0"
 TOKEN = os.environ.get("IG_ACCESS_TOKEN", "")
 MAX_PER_RUN = int(os.environ.get("MAX_PER_RUN") or 5)
 DRY = os.environ.get("DRY_RUN", "").lower() in ("1", "true", "yes")
