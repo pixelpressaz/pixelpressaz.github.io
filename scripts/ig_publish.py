@@ -25,6 +25,7 @@ TOKEN = os.environ.get("IG_ACCESS_TOKEN", "")
 MAX_PER_RUN = int(os.environ.get("MAX_PER_RUN") or 1)
 DRY = os.environ.get("DRY_RUN", "").lower() in ("1", "true", "yes")
 ONLY = os.environ.get("ONLY_ID", "").strip()
+REPLACE = os.environ.get("REPLACE", "").lower() in ("1", "true", "yes")  # with ONLY_ID: delete the old IG post, repost the queue item
 DEFAULT_IG_USER_ID = "17841425341415868"  # @pixelpressaz (shown in the Meta app, 2026-11-11)
 KEEP_DAYS = 3  # published ig/<date>/ images older than this are removed from the tree
 
@@ -40,8 +41,8 @@ def call(method, url, params=None):
     params = dict(params or {})
     params["access_token"] = TOKEN
     data = urllib.parse.urlencode(params).encode()
-    if method == "GET":
-        req = urllib.request.Request(url + "?" + data.decode())
+    if method in ("GET", "DELETE"):
+        req = urllib.request.Request(url + "?" + data.decode(), method=method)
     else:
         req = urllib.request.Request(url, data=data, method="POST")
     try:
@@ -217,6 +218,17 @@ def main():
     except RuntimeError as e:
         print(f"ERROR reading existing posts, stopping to avoid duplicates: {scrub(e)}")
         return 1
+    if REPLACE and ONLY and due:
+        _, qf, i = due[0]
+        it = queues[qf][i]
+        old_id = it.get("ig_media_id")
+        if old_id:
+            try:
+                r = call("DELETE", f"{base}/{old_id}")
+                print(f"deleted old post {old_id}: {r}")
+            except RuntimeError as e:
+                print(f"ERROR: could not delete old post {old_id}: {scrub(e)}; not reposting")
+                return 1
     changed = set()
     fails = 0
     done = 0

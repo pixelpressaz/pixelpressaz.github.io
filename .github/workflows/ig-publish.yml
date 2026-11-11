@@ -13,6 +13,10 @@ on:
         description: "Publish just this queue id now (ignores publish_at)"
         type: string
         default: ""
+      replace:
+        description: "With only_id: delete its old Instagram post first, then repost"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -37,6 +41,7 @@ jobs:
           GRAPH_VERSION: ${{ vars.GRAPH_VERSION }}
           DRY_RUN: ${{ inputs.dry_run }}
           ONLY_ID: ${{ inputs.only_id }}
+          REPLACE: ${{ inputs.replace }}
         run: python3 scripts/ig_publish.py
 
       - name: Commit queue changes
