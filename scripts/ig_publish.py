@@ -75,6 +75,23 @@ def find_user():
         errs.append("/me/accounts returned no page with instagram_business_account")
     except RuntimeError as e:
         errs.append(f"/me/accounts: {e}")
+    # System-user token (Unified login / business portfolio): look through the token's businesses
+    try:
+        biz = call("GET", f"{fb}/me/businesses", {"fields": "id,name"})
+        for b in biz.get("data", []):
+            for edge in ("owned_instagram_accounts", "instagram_business_accounts", "instagram_accounts"):
+                try:
+                    r = call("GET", f"{fb}/{b['id']}/{edge}", {"fields": "id,username"})
+                except RuntimeError as e:
+                    errs.append(f"{edge}: {e}")
+                    continue
+                for a in r.get("data", []):
+                    if a.get("id"):
+                        print(f"IG user found via business '{b.get('name')}' ({edge}): @{a.get('username')} {a['id']}")
+                        return fb, a["id"]
+        errs.append("/me/businesses: no Instagram account found")
+    except RuntimeError as e:
+        errs.append(f"/me/businesses: {e}")
     # Fallback: token from "Instagram API with Instagram Login"
     ig = f"https://graph.instagram.com/{VER}"
     try:
