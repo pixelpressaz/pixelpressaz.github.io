@@ -1,0 +1,52 @@
+name: ig-publish
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Create containers only, do not publish (test)"
+        type: boolean
+        default: false
+      only_id:
+        description: "Publish just this queue id now (ignores publish_at)"
+        type: string
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ig-publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 14
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Publish due posts
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          IG_USER_ID: ${{ vars.IG_USER_ID }}
+          GRAPH_VERSION: ${{ vars.GRAPH_VERSION }}
+          DRY_RUN: ${{ inputs.dry_run }}
+          ONLY_ID: ${{ inputs.only_id }}
+        run: python3 scripts/ig_publish.py
+
+      - name: Commit queue changes
+        if: always()
+        run: |
+          git add -A queue ig
+          if git diff --cached --quiet; then echo "no changes"; exit 0; fi
+          git -c user.name="ig-publish bot" -c user.email="actions@users.noreply.github.com" commit -q -m "ig-publish: update queue"
+          for i in 1 2 3 4; do
+            git pull -q --rebase origin main && git push -q origin HEAD:main && exit 0
+            sleep $((i*5))
+          done
+          exit 1

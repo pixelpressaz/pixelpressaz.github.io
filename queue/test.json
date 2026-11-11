@@ -1,0 +1,14 @@
+[
+ {
+  "id": "test-1",
+  "publish_at": "2026-11-11T15:07:00+04:00",
+  "caption": "Gəncədə zəncirvari qəza: yaralılar arasında 4 uşaq var 🚗\n\nNoyabrın 10-u axşam Gəncədə beş avtomobil – iki “Toyota Aqua”, “Hyundai”, “VAZ” və “Opel” toqquşub. Altı nəfər xəsarət alıb, onlardan dördü uşaqdır, ən kiçiyi 2024-cü il təvəllüdlüdür.\n\nYaralılar xəstəxanaya çatdırılıb, vəziyyətlərinin kafi olduğu bildirilir. Polis qəzanın səbəbini araşdırır.\n\nAvtomobildə uşaq oturacağından istifadə edirsinizmi? 👇\n\nMənbə: Oxu.az, Ain.az (Lent.az), APA\nFotolar: Alex Smith (CC0); Ilkin M-zade (CC BY-SA 4.0); Cschirp (CC BY-SA 2.5) / Wikimedia Commons\n\n#azərbaycan #sosial #gəncə #yolqəzası #yoltəhlükəsizliyi #uşaqoturacağı #piksel",
+  "images": [
+   "https://pixelpressaz.github.io/ig/test/10-1.jpg",
+   "https://pixelpressaz.github.io/ig/test/10-2.jpg",
+   "https://pixelpressaz.github.io/ig/test/10-3.jpg"
+  ],
+  "status": "test",
+  "note": "workflow_dispatch test item; never published by cron (status is not pending)"
+ }
+]
