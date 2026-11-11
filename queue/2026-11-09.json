@@ -8,7 +8,7 @@
    "https://pixelpressaz.github.io/ig/2026-11-09/01-2.jpg",
    "https://pixelpressaz.github.io/ig/2026-11-09/01-3.jpg"
   ],
-  "status": "pending"
+  "status": "skipped_duplicate"
  },
  {
   "id": "2026-11-09-02",
@@ -19,7 +19,7 @@
    "https://pixelpressaz.github.io/ig/2026-11-09/02-2.jpg",
    "https://pixelpressaz.github.io/ig/2026-11-09/02-3.jpg"
   ],
-  "status": "pending"
+  "status": "skipped_duplicate"
  },
  {
   "id": "2026-11-09-03",
@@ -30,7 +30,9 @@
    "https://pixelpressaz.github.io/ig/2026-11-09/03-2.jpg",
    "https://pixelpressaz.github.io/ig/2026-11-09/03-3.jpg"
   ],
-  "status": "pending"
+  "status": "published",
+  "ig_media_id": "18102617447538553",
+  "published_at": "2026-11-11T10:20:44+04:00"
  },
  {
   "id": "2026-11-09-04",
@@ -41,7 +43,9 @@
    "https://pixelpressaz.github.io/ig/2026-11-09/04-2.jpg",
    "https://pixelpressaz.github.io/ig/2026-11-09/04-3.jpg"
   ],
-  "status": "pending"
+  "status": "published",
+  "ig_media_id": "17963627505000494",
+  "published_at": "2026-11-11T10:21:14+04:00"
  },
  {
   "id": "2026-11-09-05",
@@ -52,7 +56,9 @@
    "https://pixelpressaz.github.io/ig/2026-11-09/05-2.jpg",
    "https://pixelpressaz.github.io/ig/2026-11-09/05-3.jpg"
   ],
-  "status": "pending"
+  "status": "published",
+  "ig_media_id": "18100721957088521",
+  "published_at": "2026-11-11T10:21:42+04:00"
  },
  {
   "id": "2026-11-09-06",
@@ -63,7 +69,9 @@
    "https://pixelpressaz.github.io/ig/2026-11-09/06-2.jpg",
    "https://pixelpressaz.github.io/ig/2026-11-09/06-3.jpg"
   ],
-  "status": "pending"
+  "status": "published",
+  "ig_media_id": "18155191750541498",
+  "published_at": "2026-11-11T10:22:11+04:00"
  },
  {
   "id": "2026-11-09-07",
@@ -74,7 +82,9 @@
    "https://pixelpressaz.github.io/ig/2026-11-09/07-2.jpg",
    "https://pixelpressaz.github.io/ig/2026-11-09/07-3.jpg"
   ],
-  "status": "pending"
+  "status": "published",
+  "ig_media_id": "18012610223776471",
+  "published_at": "2026-11-11T10:22:42+04:00"
  },
  {
   "id": "2026-11-09-08",
