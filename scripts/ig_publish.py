@@ -142,9 +142,6 @@ def cleanup(now):
 
 
 def main():
-    if not TOKEN:
-        print("ERROR: secret IG_ACCESS_TOKEN is not set")
-        return 1
     now = datetime.now(BAKU)
     due = []  # (publish_at, file, index)
     queues = {}
@@ -164,6 +161,9 @@ def main():
         if not DRY:
             cleanup(now)
         return 0
+    if not TOKEN:
+        print("ERROR: secret IG_ACCESS_TOKEN is not set; due posts stay pending")
+        return 1
     try:
         base, uid = find_user()
     except RuntimeError as e:
