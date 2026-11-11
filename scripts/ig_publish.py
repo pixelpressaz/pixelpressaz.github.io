@@ -138,6 +138,29 @@ def publish(base, uid, item):
     return res["id"]
 
 
+def key(caption):
+    """First line of a caption, normalized, to spot posts already on the account."""
+    line = (caption or "").strip().split("\n", 1)[0]
+    return re.sub(r"\W+", "", line.lower())[:50]
+
+
+def existing_keys(base, uid):
+    keys, url, params = set(), f"{base}/{uid}/media", {"fields": "caption,timestamp", "limit": "100"}
+    for _ in range(3):  # last ~300 posts
+        r = call("GET", url, params)
+        for m in r.get("data", []):
+            k = key(m.get("caption"))
+            if k:
+                keys.add(k)
+        nxt = r.get("paging", {}).get("next")
+        if not nxt:
+            break
+        u = urllib.parse.urlparse(nxt)
+        url = f"{u.scheme}://{u.netloc}{u.path}"
+        params = {k: v[0] for k, v in urllib.parse.parse_qs(u.query).items() if k != "access_token"}
+    return keys
+
+
 def parse_t(s):
     t = datetime.fromisoformat(s)
     return t if t.tzinfo else t.replace(tzinfo=BAKU)
@@ -175,7 +198,6 @@ def main():
             elif it.get("status") == "pending" and parse_t(it["publish_at"]) <= now:
                 due.append((parse_t(it["publish_at"]), qf, i))
     due.sort()
-    due = due[:MAX_PER_RUN]
     print(f"{now.isoformat(timespec='minutes')} Baku: {len(due)} post(s) due, Graph {VER}, dry_run={DRY}")
     if not due:
         if not DRY:
@@ -189,14 +211,31 @@ def main():
     except RuntimeError as e:
         print(f"ERROR: {scrub(e)}")
         return 1
+    try:
+        seen = existing_keys(base, uid)
+        print(f"{len(seen)} existing posts checked for duplicates")
+    except RuntimeError as e:
+        print(f"ERROR reading existing posts, stopping to avoid duplicates: {scrub(e)}")
+        return 1
     changed = set()
     fails = 0
+    done = 0
     for _, qf, i in due:
+        if done >= MAX_PER_RUN:
+            break
         it = queues[qf][i]
         print(f"- {it['id']} (publish_at {it['publish_at']})")
+        if key(it["caption"]) in seen and not ONLY:
+            print("  already on Instagram, skipped")
+            if not DRY:
+                it.update(status="skipped_duplicate")
+                changed.add(qf)
+            continue
+        done += 1
         try:
             mid = publish(base, uid, it)
             if mid:
+                seen.add(key(it["caption"]))
                 it.update(status="published", ig_media_id=mid,
                           published_at=datetime.now(BAKU).isoformat(timespec="seconds"))
                 it.pop("error", None)
