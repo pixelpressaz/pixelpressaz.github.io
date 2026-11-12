@@ -229,7 +229,9 @@
    "https://pixelpressaz.github.io/ig/2026-11-10/18-2.jpg",
    "https://pixelpressaz.github.io/ig/2026-11-10/18-3.jpg"
   ],
-  "status": "pending"
+  "status": "published",
+  "ig_media_id": "18170510848427875",
+  "published_at": "2026-11-12T18:05:29+04:00"
  },
  {
   "id": "2026-11-10-19",
