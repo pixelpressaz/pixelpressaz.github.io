@@ -108,5 +108,115 @@
    "https://pixelpressaz.github.io/ig/2026-11-12/10-3.jpg"
   ],
   "status": "pending"
+ },
+ {
+  "id": "2026-11-12-11",
+  "publish_at": "2026-11-12T15:52:00+04:00",
+  "caption": "Telefonunuza “cərimə” mesajı gəldi? Tələsməyin 🚨\n\nMilli Kibertəhlükəsizlik Agentliyi (MKA) son günlər Dövlət Yol Polisinin və Azparking-in adından fişinq hücumlarının artdığını bildirib. Xarici nömrələrdən gələn SMS-lərdə guya sürət həddinin aşılmasına görə cərimə və ya kiçik parkinq borcu (məsələn, 0,70 manat) göstərilir, link isə ASAN Pay və Azparking-in surətini çıxaran saxta səhifəyə aparır.\n\nOrada əvvəlcə avtomobilin qeydiyyat nişanı, sonra telefon nömrəsi və bank kartının bütün məlumatları – nömrə, bitmə tarixi, CVV/CVC – istənilir. MKA xatırladır: dövlət qurumları ödəniş bildirişlərini xarici nömrələrdən göndərmir. Ünvan sətrində domeni yoxlayın, .top, .xyz kimi şübhəli linklərə keçməyin. Kart məlumatını artıq daxil etmisinizsə, dərhal bankla əlaqə saxlayıb kartı bloklayın.\n\nSizə də belə mesaj gəlibmi? 👇\n\nMənbə: Ain.az (APA, Report), FED.az, Milli Kibertəhlükəsizlik Agentliyi\nFotolar: 彭嘉傑, vchebaki (CC BY-SA 4.0) / Wikimedia Commons\n\n#azərbaycan #texnologiya #fişinq #kibertəhlükəsizlik #mka #saxtasms #bankkartı #piksel",
+  "images": [
+   "https://pixelpressaz.github.io/ig/2026-11-12/11-1.jpg",
+   "https://pixelpressaz.github.io/ig/2026-11-12/11-2.jpg",
+   "https://pixelpressaz.github.io/ig/2026-11-12/11-3.jpg"
+  ],
+  "status": "pending"
+ },
+ {
+  "id": "2026-11-12-12",
+  "publish_at": "2026-11-12T16:36:00+04:00",
+  "caption": "Süni intellekt ilk dəfə milyonlarla insanın istifadə etdiyi şifrələmə kodunu bu dərinlikdə yoxladı 🔐\n\nGoogle DeepMind 10 noyabrda AlphaProof Code adlı tədqiqat sistemini açıqlayıb. Gemini modelləri ilə işləyən agentlər Signal mesajlaşma tətbiqinin əsas kriptoqrafiya kitabxanasının (libsignal 0.105.4) cihazlarda işləyən kompilyasiya olunmuş kodunu yoxlayıb. Mesajların gizliliyi və orijinallığı, köhnə mesajların sonradan açılmaması kimi xüsusiyyətlər Lean adlı sübut sistemində riyazi olaraq təsdiqlənib. İş 4 həftə çəkib, agentlər 6 milyondan çox sətir sübut yazıb, insanlara isə kodun təxminən 1%-ni əl ilə yoxlamaq qalıb.\n\nYeni zəiflik tapılmayıb. Sistemi sınamaq üçün kodun ayrıca nüsxəsinə əvvəllər düzəldilmiş 2 xəta geri qaytarılıb və hər ikisi aşkarlanıb. DeepMind qeyd edir ki, nəyin sübut olunacağına hələ də insanlar qərar verir, yoxlama bütün tətbiqi deyil, yalnız əsas protokol kodunu əhatə edir. Signal-ın texniki direktoru Eren Kret bunu “böyük irəliləyiş” adlandırıb.\n\nSizcə Sİ proqramların təhlükəsizliyini yoxlamaqda insanları əvəz edə bilərmi? 👇\n\nMənbə: Google DeepMind, CyberInsider\nFotolar: Petar Milošević (CC BY-SA 4.0); BigDumbDinosaur, representing BCS Technology Limit, Froztbyte (CC BY-SA 3.0) / Wikimedia Commons\n\n#dünya #texnologiya #deepmind #signal #kibertəhlükəsizlik #şifrələmə #süniintellekt #piksel",
+  "images": [
+   "https://pixelpressaz.github.io/ig/2026-11-12/12-1.jpg",
+   "https://pixelpressaz.github.io/ig/2026-11-12/12-2.jpg",
+   "https://pixelpressaz.github.io/ig/2026-11-12/12-3.jpg"
+  ],
+  "status": "pending"
+ },
+ {
+  "id": "2026-11-12-13",
+  "publish_at": "2026-11-12T17:20:00+04:00",
+  "caption": "Azərbaycanda əmək müqaviləsi ilə neçə nəfər işləyir? 💼\n\nDövlət Statistika Komitəsinin məlumatına görə, oktyabrın 1-nə ölkədə muzdla çalışanların sayı 1 milyon 790,8 min nəfər olub. Onların 836,8 mini dövlət, 954 mini isə qeyri-dövlət sektorunda çalışır. İlin əvvəli ilə müqayisədə ümumi say 17,2 min nəfər azalıb: dövlət sektorunda 29 min nəfər az, özəl sektorda isə 11,8 min nəfər çox işçi var.\n\nİşçilərin ən böyük hissəsi ticarət və avtomobil təmiri (18,7%), təhsil (17,6%) və sənaye (13,9%) sahələrindədir; səhiyyə və sosial xidmətlər 8,6%, tikinti 6,9% pay alır. Yanvar–sentyabrda orta aylıq nominal əməkhaqqı ötən ilin eyni dövründən 7,8% artaraq 1172,7 manat olub.\n\nSizcə, özəl sektorda iş yerləri niyə daha sürətlə artır? 👇\n\nMənbə: Oxu.az, Ain.az (APA, Publika.az, Yeni Avaz), Dövlət Statistika Komitəsi\nFotolar: w_lemay (CC BY-SA 2.0); ChanisCaucasi (CC BY 4.0); Anonimski (CC0) / Wikimedia Commons\n\n#azərbaycan #iqtisadiyyat #əməkhaqqı #məşğulluq #statistika #işçilər #maaş #piksel",
+  "images": [
+   "https://pixelpressaz.github.io/ig/2026-11-12/13-1.jpg",
+   "https://pixelpressaz.github.io/ig/2026-11-12/13-2.jpg",
+   "https://pixelpressaz.github.io/ig/2026-11-12/13-3.jpg"
+  ],
+  "status": "pending"
+ },
+ {
+  "id": "2026-11-12-14",
+  "publish_at": "2026-11-12T18:04:00+04:00",
+  "caption": "74 yaşlı okean layneri dənizin dibində balıqlar üçün yeni ev olacaq 🐠\n\nVaxtilə Atlantik okeanını 3 gün 10 saata keçərək sürət rekordu qıran SS United States layneri 11 noyabrda ABŞ-ın Florida ştatında, Destin şəhərindən təxminən 40 km aralıda Meksika körfəzinə batırılıb. 302 metrlik gəmi Titanikdən 30 metrdən çox uzundur və artıq dünyanın qəsdən batırılmış gəmidən yaradılan ən böyük süni rifi sayılır. 1952-1969-cu illərdə xidmət edən layner 800-dən çox transatlantik səfər edib.\n\nHazırlıq zamanı göyərtələrdə böyük deşiklər açılıb, 128 yanacaq və yağ çəni təmizlənib, 400-dən çox illüminator çıxarılıb. Partlayıcı istifadəsinə icazə verilmədiyi üçün gövdə klapanlar açılaraq su ilə doldurulub. Təxminən bir saat gözlənilən batma axşam saatlarına qədər uzanıb. Gəmi ~55 metr dərinlikdə dibə oturub, üst göyərtəsi səthdən ~18 metr aşağıdadır. Rəsmilər snapper, qrupper və tuna kimi növlərin burada məskunlaşacağını gözləyir. Gəminin 20 metrlik bacaları isə sahildə açılacaq muzeyin əsasını təşkil edəcək.\n\nSizcə köhnə gəmiləri hissələrə ayırmaq, yoxsa rifə çevirmək daha yaxşıdır? 👇\n\nMənbə: AP (ABC News), Fox Weather, Northeastern Global News\nFotolar: Hugh Llewelyn (CC BY-SA 2.0); Scdnr (CC BY-SA 3.0); Gökhan Tolun (CC BY-SA 4.0) / Wikimedia Commons\n\n#dünya #sosial #okean #süniqrif #gəmi #florida #təbiət #piksel",
+  "images": [
+   "https://pixelpressaz.github.io/ig/2026-11-12/14-1.jpg",
+   "https://pixelpressaz.github.io/ig/2026-11-12/14-2.jpg",
+   "https://pixelpressaz.github.io/ig/2026-11-12/14-3.jpg"
+  ],
+  "status": "pending"
+ },
+ {
+  "id": "2026-11-12-15",
+  "publish_at": "2026-11-12T18:48:00+04:00",
+  "caption": "Startap ideyası qanunda yoxdursa, nə olsun? 🧪\n\nİnnovasiya və Rəqəmsal İnkişaf Agentliyinin (İRİA) jurnalistlər üçün keçirdiyi tədbirdə qurumun rəhbərliyi bildirib ki, qanunvericiliyə “sandbox” – xüsusi tənzimləmə rejimi əlavə olunub. Hələ qanunla tənzimlənməyən, lakin innovativ və iqtisadi dəyəri olan layihələr dövlət qurumlarının rəyi əsasında sınaq mühitində həyata keçirilə bilər: nəqliyyat, tibb, maliyyə bazarları və digər sahələrdə.\n\nPlanlarda bütün dövlət xidmətlərinin MyGov və MyGov Business platformalarında birləşdirilməsi, vahid məlumat hövzəsi, dövlət və özəl sektorda süni intellekt həllərinin genişlənməsi, Milli CERT və Milli SOC strukturları var. Texnopark rezidentləri üçün 10 illik güzəştlər isə artıq qüvvədədir. CyberCollab təşəbbüsü ilə indiyədək 78-dən çox qurum və şirkətin 15 minə yaxın əməkdaşı, həmçinin 360-dan çox rəhbər kibertəhlükəsizlik təlimi keçib.\n\nSandbox-da hansı startapı ilk sınamaq istərdiniz? 👇\n\nMənbə: Ain.az (Far.Az, Yeni Sabah), İnnovasiya və Rəqəmsal İnkişaf Agentliyi\nFotolar: www.Pixel.la Free Stock Photos (CC0); ShakataGaNai, Franklsf95 (CC BY-SA 3.0) / Wikimedia Commons\n\n#azərbaycan #texnologiya #startap #sandbox #süniintellekt #mygov #kibertəhlükəsizlik #piksel",
+  "images": [
+   "https://pixelpressaz.github.io/ig/2026-11-12/15-1.jpg",
+   "https://pixelpressaz.github.io/ig/2026-11-12/15-2.jpg",
+   "https://pixelpressaz.github.io/ig/2026-11-12/15-3.jpg"
+  ],
+  "status": "pending"
+ },
+ {
+  "id": "2026-11-12-16",
+  "publish_at": "2026-11-12T19:33:00+04:00",
+  "caption": "İngiltərə futbol tarixində yeni səhifə bu axşam yazılır ⚽\n\nİngiltərə millisinin kapitanı Harri Keyn 12 noyabrda Londonun Uembli stadionunda Xorvatiya ilə Millətlər Liqası oyununa çıxsa, ölkə tarixində ən çox oyun keçirən kişi futbolçu olacaq. İndiyədək rekord 1970-1990-cı illərdə 125 oyun keçirən qapıçı Piter Şiltona məxsus idi. Keyn bu göstəriciyə oktyabrda Çexiya ilə oyunda (3:0) iki qol vuraraq çatmışdı. Oyun Bakı vaxtı ilə 23:45-də başlayır.\n\n33 yaşlı “Bavariya” hücumçusu artıq İngiltərənin ən çox qol vuran futbolçusudur: 125 oyunda 91 qol. O, həmçinin dünya çempionatları və Avropa çempionatlarında 36 oyunla ölkənin rekordçusudur. Keyn 2015-ci ildəki debütündə 79-cu saniyədə qol vurmuşdu. Oyundan əvvəl Uembli-də Şiltonun da iştirakı ilə xüsusi mərasim keçiriləcək.\n\nSizcə Keyn milli komandada neçə oyuna çatacaq? 👇\n\nMənbə: BBC Sport, ESPN\nFotolar: Robert Lamb (CC BY-SA 2.0); Daniel Lobo, Dominic Alves (CC BY 2.0) / Wikimedia Commons\n\n#dünya #idman #futbol #harrikeyn #ingiltərə #rekord #millətlərliqası #piksel",
+  "images": [
+   "https://pixelpressaz.github.io/ig/2026-11-12/16-1.jpg",
+   "https://pixelpressaz.github.io/ig/2026-11-12/16-2.jpg",
+   "https://pixelpressaz.github.io/ig/2026-11-12/16-3.jpg"
+  ],
+  "status": "pending"
+ },
+ {
+  "id": "2026-11-12-17",
+  "publish_at": "2026-11-12T20:17:00+04:00",
+  "caption": "Bir əsrdən çox yaşamış ağaclar bir neçə günə kəsildi 🌳\n\nDaxili İşlər Nazirliyi Ekologiya və Təbii Sərvətlər Nazirliyinin Dövlət Ekoloji Təhlükəsizlik Xidməti ilə birlikdə Şəki rayonunun Kiş kəndi ərazisində əməliyyat keçirib. Meşədə qiymətli ağac növlərinin kütləvi kəsilməsi barədə məlumat yoxlanılıb və 100-dən çox fıstıq ağacının kötüyü aşkarlanıb. Ekspertlərin rəyinə görə, bəzi ağacların yaşı 100–150 il olub.\n\nAğacları qanunsuz kəsib emal etdikdən sonra satmaqda şübhəli bilinən altı rayon sakini saxlanılıb, digər şəxslərin müəyyənləşdirilməsi üçün araşdırma davam edir. Nazirlik bildirir ki, yaşıllıqların məhv edilməsi təbiətə zərər vurmaqla yanaşı cinayət məsuliyyəti də yarada bilər, belə faktlar barədə dərhal polisə məlumat vermək lazımdır.\n\nSizin bölgədə meşələr necə qorunur? 👇\n\nMənbə: Oxu.az, Ain.az, APA, Qafqazinfo, Daxili İşlər Nazirliyi\nFotolar: Potito m. petrone (CC BY-SA 3.0); David Bremner (CC BY-SA 2.0); Havin HP (CC BY-SA 4.0) / Wikimedia Commons\n\n#azərbaycan #sosial #şəki #meşə #ekologiya #fıstıqağacı #təbiət #piksel",
+  "images": [
+   "https://pixelpressaz.github.io/ig/2026-11-12/17-1.jpg",
+   "https://pixelpressaz.github.io/ig/2026-11-12/17-2.jpg",
+   "https://pixelpressaz.github.io/ig/2026-11-12/17-3.jpg"
+  ],
+  "status": "pending"
+ },
+ {
+  "id": "2026-11-12-18",
+  "publish_at": "2026-11-12T21:01:00+04:00",
+  "caption": "Azərbaycanda şirkətlərin sayı artır, amma temp yavaşlayır 🏢\n\nDövlət Vergi Xidmətinin məlumatına görə, noyabrın 1-nə ölkədə 214 988 kommersiya qurumu qeydiyyatda olub. Bu, bir il əvvəlki 202 088-dən 12 900 vahid və ya 6,4% çoxdur. Lakin illik artım tempi ötən ilki 7,7%-dən aşağı düşüb. Oktyabrda 1 183 yeni kommersiya qurumu qeydiyyatdan keçib – 2025-ci ilin oktyabrından (1 318) təxminən 10% az.\n\nYeni şirkətlərin 86,8%-i yerli, 13,2%-i xarici investisiyalıdır, 84%-i isə elektron qaydada qeydiyyata alınıb. Vergi ödəyicilərinin ümumi sayı bir ildə 4,5% artaraq 1 734 871-ə çatıb; onların 86,7%-i fiziki şəxslərdir. Qeydiyyatdakı kommersiya hüquqi şəxslərinin 92,5%-i MMC formasında yaradılıb.\n\nSiz öz biznesinizi açmağı düşünürsünüzmü? 👇\n\nMənbə: Ain.az (APA, Banker.az, Marja.az), Dövlət Vergi Xidməti\nFotolar: Kongpean620 (CC BY-SA 3.0); Mc681, Xoncha (CC BY-SA 4.0) / Wikimedia Commons\n\n#azərbaycan #iqtisadiyyat #biznes #şirkət #sahibkarlıq #mmc #eqeydiyyat #piksel",
+  "images": [
+   "https://pixelpressaz.github.io/ig/2026-11-12/18-1.jpg",
+   "https://pixelpressaz.github.io/ig/2026-11-12/18-2.jpg",
+   "https://pixelpressaz.github.io/ig/2026-11-12/18-3.jpg"
+  ],
+  "status": "pending"
+ },
+ {
+  "id": "2026-11-12-19",
+  "publish_at": "2026-11-12T21:45:00+04:00",
+  "caption": "Data mərkəzləri və qatarlar Siemens-ə rekord il yaşatdı 🚆\n\nAlmaniyanın Siemens AG şirkəti 12 noyabrda 30 sentyabrda başa çatan 2026 maliyyə ilinin nəticələrini açıqlayıb. Sifarişlər müqayisəli əsasda 25% artaraq rekord 108,2 mlrd avroya, sifariş portfeli 143 mlrd avroya çatıb. Gəlir 8% artıb və 83,4 mlrd avro olub, sənaye biznesinin mənfəəti 13% artaraq 13,3 mlrd avroya yüksəlib. Dördüncü rübdə sifarişlər 58% artıb, nəqliyyat bölməsinin sifarişləri 4 dəfədən çox artaraq 10,7 mlrd avroya çatıb. Rüblük gəlir (23,7 mlrd avro) və mənfəət (3,9 mlrd avro) analitiklərin gözləntilərini üstələyib.\n\nXalis mənfəət isə 9% azalaraq 9,5 mlrd avro olub, çünki ötən il bir bölmənin satışından 2,1 mlrd avroluq birdəfəlik gəlir var idi. Şirkət orta müddətli artım hədəfini 7-11%-ə qaldırıb və dividendi 5,35-dən 5,50 avroya artırmağı təklif edir. Səhmlər Frankfurt birjasında səhər ticarətində 4,4% bahalaşıb. Qeyd: bu, dünən hesabat verən Siemens Energy-dən ayrı şirkətdir.\n\nSizcə Sİ data mərkəzləri sənaye şirkətləri üçün yeni “qızıl mədən”dirmi? 👇\n\nMənbə: Reuters, MLQ.ai\nFotolar: Ym1965, Stefan Kühn (CC BY-SA 3.0); Oleg Yunakov (CC BY-SA 4.0) / Wikimedia Commons\n\n#dünya #iqtisadiyyat #siemens #almaniya #sənaye #datamərkəzi #birja #piksel",
+  "images": [
+   "https://pixelpressaz.github.io/ig/2026-11-12/19-1.jpg",
+   "https://pixelpressaz.github.io/ig/2026-11-12/19-2.jpg",
+   "https://pixelpressaz.github.io/ig/2026-11-12/19-3.jpg"
+  ],
+  "status": "pending"
+ },
+ {
+  "id": "2026-11-12-20",
+  "publish_at": "2026-11-12T22:30:00+04:00",
+  "caption": "Asteroidə zərbə vurdular, indi isə “cinayət yerini” araşdırırlar ☄️\n\nAvropa Kosmik Agentliyinin (ESA) Hera kosmik aparatı Didimos asteroidi və onun peyki Dimorfosu yaxın məsafədən öyrənməyə başlayıb. 2022-ci ilin sentyabrında NASA-nın DART aparatı planetin müdafiəsi sınağı çərçivəsində Dimorfosa çırpılmış və onun Didimos ətrafındakı orbitini təxminən 33 dəqiqə qısaltmışdı. Bu, gözləniləndən xeyli çox idi. Hera indi asteroidlərdən 25-30 km aralıdadır, gələn ay isə ~20 km-ə qədər yaxınlaşacaq.\n\n2024-cü ildə buraxılan və Yerdən təxminən 197 mln km uzaqda olan Hera kiçik avtomobil ölçüsündədir, 25 elmi cihaz və iki ayaqqabı qutusu boyda kubsat daşıyır. Kubsatlar Dimorfosu daha yaxından öyrənəcək və ona enməyə cəhd edəcək. Alimlər zərbənin asteroiddə necə krater açdığını və onun kütləsini ölçmək istəyir. Bu, gələcəkdə təhlükəli asteroidi yayındırmaq üçün vacib məlumatdır. Hər iki asteroidin ətraflı şəkilləri 25 noyabrda açıqlanacaq.\n\nSizcə bəşəriyyət təhlükəli asteroidi yolundan çəkməyə hazırdırmı? 👇\n\nMənbə: ESA, AP (Phys.org)\nFotolar: ESO/L. Calçada/Nick Risinger (skysurvey.org) (CC BY 4.0); NASA/JPL (Public domain); APFL/ESO (CC BY 3.0) / Wikimedia Commons\n\n#dünya #elm #kosmos #asteroid #esa #hera #planetmüdafiəsi #piksel",
+  "images": [
+   "https://pixelpressaz.github.io/ig/2026-11-12/20-1.jpg",
+   "https://pixelpressaz.github.io/ig/2026-11-12/20-2.jpg",
+   "https://pixelpressaz.github.io/ig/2026-11-12/20-3.jpg"
+  ],
+  "status": "pending"
  }
 ]
