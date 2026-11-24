@@ -138,8 +138,8 @@
    "https://pixelpressaz.github.io/ig/2026-11-23/11-2.jpg",
    "https://pixelpressaz.github.io/ig/2026-11-23/11-3.jpg"
   ],
-  "status": "error",
-  "error": "HTTP 500: Please reduce the amount of data you're asking for, then retry your request (type=None, code=1, sub=None)"
+  "status": "pending",
+  "retry_of_error": "HTTP 500: Please reduce the amount of data you're asking for, then retry your request (type=None, code=1, sub=None)"
  },
  {
   "id": "2026-11-23-12",
