@@ -129,6 +129,8 @@ def publish(base, uid, item):
     if kind == "story":
         c = call("POST", f"{base}/{uid}/media", {"media_type": "STORIES", "image_url": item["images"][0]})
         wait_finished(base, c["id"])
+        if DRY:
+            print(f"  DRY_RUN: story container {c['id']} FINISHED, not published")
         return None if DRY else call("POST", f"{base}/{uid}/media_publish", {"creation_id": c["id"]})["id"]
     if kind == "reel":
         params = {"media_type": "REELS", "video_url": item["video"], "caption": item["caption"], "share_to_feed": "true"}
