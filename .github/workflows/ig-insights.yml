@@ -1,0 +1,23 @@
+name: ig-insights
+
+# Read-only: prints an aggregated Instagram insights report to the job log. Manual run only.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Insights report
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          IG_USER_ID: ${{ vars.IG_USER_ID }}
+          GRAPH_VERSION: ${{ vars.GRAPH_VERSION }}
+        run: python3 scripts/ig_insights.py
