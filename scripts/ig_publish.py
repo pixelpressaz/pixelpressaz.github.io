@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """Publish due PİKSEL carousels from queue/*.json to Instagram via the Graph API.
 
-Queue item: {"id","publish_at" (ISO, Asia/Baku),"caption","images":[3 https URLs],"status":"pending"}
+Queue item: {"id","publish_at" (ISO, Asia/Baku),"caption","images":[https URLs],"status":"pending"}
+  optional "type": "carousel" (default; 2-10 images), "reel" (+ "video": mp4 URL, optional "cover"),
+  "story" (one image, no caption; Stories are not in /media, so no caption duplicate check).
 On success: status="published", ig_media_id, published_at. On failure: status="error", error.
 At most MAX_PER_RUN posts per run, oldest first. The token is read from IG_ACCESS_TOKEN and is
 never printed. DRY_RUN=1 creates the containers and waits for FINISHED but does not publish and
@@ -123,6 +125,21 @@ def wait_finished(base, cid, limit=180):
 
 
 def publish(base, uid, item):
+    kind = item.get("type", "carousel")
+    if kind == "story":
+        c = call("POST", f"{base}/{uid}/media", {"media_type": "STORIES", "image_url": item["images"][0]})
+        wait_finished(base, c["id"])
+        return None if DRY else call("POST", f"{base}/{uid}/media_publish", {"creation_id": c["id"]})["id"]
+    if kind == "reel":
+        params = {"media_type": "REELS", "video_url": item["video"], "caption": item["caption"], "share_to_feed": "true"}
+        if item.get("cover"):
+            params["cover_url"] = item["cover"]
+        c = call("POST", f"{base}/{uid}/media", params)
+        wait_finished(base, c["id"], limit=480)
+        if DRY:
+            print(f"  DRY_RUN: reel container {c['id']} FINISHED, not published")
+            return None
+        return call("POST", f"{base}/{uid}/media_publish", {"creation_id": c["id"]})["id"]
     children = []
     for url in item["images"]:
         c = call("POST", f"{base}/{uid}/media", {"image_url": url, "is_carousel_item": "true"})
@@ -176,9 +193,9 @@ def cleanup(now):
                 continue
             if now - parse_t(it["published_at"]) < timedelta(days=KEEP_DAYS):
                 continue
-            for u in it.get("images", []):
+            for u in it.get("images", []) + [it.get("video") or "", it.get("cover") or ""]:
                 p = u.split(".github.io/", 1)[-1]
-                if p.startswith("ig/") and os.path.exists(p):
+                if u and p.startswith("ig/") and os.path.exists(p):
                     os.remove(p)
                     removed += 1
     if removed:
@@ -237,7 +254,7 @@ def main():
             break
         it = queues[qf][i]
         print(f"- {it['id']} (publish_at {it['publish_at']})")
-        if key(it["caption"]) in seen and not ONLY:
+        if it.get("type") != "story" and key(it["caption"]) in seen and not ONLY:
             print("  already on Instagram, skipped")
             if not DRY:
                 it.update(status="skipped_duplicate")
@@ -247,7 +264,8 @@ def main():
         try:
             mid = publish(base, uid, it)
             if mid:
-                seen.add(key(it["caption"]))
+                if it.get("type") != "story":
+                    seen.add(key(it["caption"]))
                 it.update(status="published", ig_media_id=mid,
                           published_at=datetime.now(BAKU).isoformat(timespec="seconds"))
                 it.pop("error", None)
