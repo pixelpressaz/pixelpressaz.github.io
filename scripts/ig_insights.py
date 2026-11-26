@@ -68,6 +68,43 @@ def main():
     p("\n## online_followers")
     p(json.dumps(r.get("data", []) if r else {"error": e}, ensure_ascii=False)[:2500])
 
+    # Basic fields work without the insights permission: likes/comments for every post on the account
+    media, url, prm = [], f"{base}/{uid}/media", {"fields": "id,timestamp,media_type,media_product_type,like_count,comments_count,caption", "limit": 100}
+    while url and len(media) < 3000:
+        r, e = try_call(url, prm)
+        if not r:
+            p(f"media list XƏTA {e}")
+            break
+        media += r.get("data", [])
+        nxt = r.get("paging", {}).get("next")
+        if not nxt:
+            break
+        import urllib.parse as up
+        q = dict(up.parse_qsl(up.urlparse(nxt).query))
+        q.pop("access_token", None)
+        url, prm = nxt.split("?")[0], q
+    p(f"\n## Bütün media (əsas sahələr): {len(media)}")
+    if media:
+        def ag(fn):
+            g = collections.defaultdict(list)
+            for m in media:
+                g[fn(m)].append(m)
+            return sorted(((k, len(v), sum(x.get("like_count", 0) for x in v) / len(v),
+                            sum(x.get("comments_count", 0) for x in v) / len(v)) for k, v in g.items()), key=lambda x: str(x[0]))
+        tb = lambda m: datetime.fromisoformat(m["timestamp"].replace("+0000", "+00:00")).astimezone(BAKU)
+        for name, fn in [("Növ", lambda m: f"{m.get('media_type')}/{m.get('media_product_type')}"),
+                         ("Gün", lambda m: tb(m).strftime("%Y-%m-%d")), ("Saat (Bakı)", lambda m: tb(m).hour),
+                         ("Həftə günü", lambda m: tb(m).strftime("%a"))]:
+            p(f"\n### {name}: açar, say, ort. like, ort. şərh")
+            for k, n, l, c in ag(fn):
+                p(f"- {k}: {n} | {l:.2f} | {c:.2f}")
+        top = sorted(media, key=lambda m: -(m.get("like_count", 0) * 1 + m.get("comments_count", 0) * 3))[:20]
+        p("\n### TOP 20 (like + 3×şərh)")
+        for m in top:
+            p(f"- {tb(m):%Y-%m-%d %H:%M} {m.get('media_product_type')} like={m.get('like_count',0)} şərh={m.get('comments_count',0)} | {(m.get('caption') or '').split(chr(10))[0][:80]}")
+        caps = collections.Counter((m.get("caption") or "")[:120] for m in media)
+        p(f"\nTəkrarlanan caption (eyni ilk 120 simvol): {sum(n - 1 for n in caps.values() if n > 1)} post")
+
     # Per-post metrics for posts we published
     posts = []
     for qf in sorted(glob.glob("queue/2*.json")):
@@ -82,6 +119,8 @@ def main():
             r, e2 = try_call(f"{base}/{it['ig_media_id']}/insights", {"metric": "reach,likes,comments,saved,shares"})
             if not r:
                 errs[(e or "")[:160]] += 1
+                if not rows and sum(errs.values()) >= 5:
+                    break  # no insights permission; don't hammer the API
                 continue
         vals = {d["name"]: (d.get("values") or [{}])[0].get("value", d.get("total_value", {}).get("value", 0)) for d in r.get("data", [])}
         cap = it["caption"]
@@ -94,7 +133,7 @@ def main():
     for k, n in errs.most_common(3):
         p(f"- {n}× {k}")
     if not rows:
-        return 1
+        return 0 if media else 1
     key = "views" if any(r.get("views") for r in rows) else "reach"
 
     def agg(group):
