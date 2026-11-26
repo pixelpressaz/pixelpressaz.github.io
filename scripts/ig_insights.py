@@ -119,6 +119,8 @@ def main():
             r, e2 = try_call(f"{base}/{it['ig_media_id']}/insights", {"metric": "reach,likes,comments,saved,shares"})
             if not r:
                 errs[(e or "")[:160]] += 1
+                if not rows and sum(errs.values()) >= 5:
+                    break  # no insights permission; don't hammer the API
                 continue
         vals = {d["name"]: (d.get("values") or [{}])[0].get("value", d.get("total_value", {}).get("value", 0)) for d in r.get("data", [])}
         cap = it["caption"]
