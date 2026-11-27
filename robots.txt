@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /queue/
+Disallow: /scripts/
+
+Sitemap: https://pixelpressaz.github.io/sitemap.xml

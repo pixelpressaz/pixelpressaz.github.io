@@ -1,0 +1,57 @@
+name: site-build
+
+# Builds the SEO pages (xeber/, gun/, movzu/, sitemap.xml, robots.txt, feed.xml)
+# from posts.json whenever new posts are pushed. Does not touch queue/ or ig/.
+on:
+  push:
+    branches: [main]
+    paths:
+      - posts.json
+      - scripts/build_site.py
+      - site-config.json
+      - CNAME
+  schedule:
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: site-build
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Build pages
+        run: |
+          pip install -q pillow
+          python3 scripts/build_site.py
+
+      - name: Commit generated pages
+        run: |
+          git add -A xeber gun movzu assets sitemap.xml robots.txt feed.xml logo.png index.html
+          if git diff --cached --quiet; then echo "no changes"; exit 0; fi
+          git -c user.name="site-build bot" -c user.email="actions@users.noreply.github.com" commit -q -m "site-build: update SEO pages"
+          for i in 1 2 3 4; do
+            if git pull -q --rebase origin main; then
+              git push -q origin HEAD:main && exit 0
+            else
+              # posts.json changed meanwhile: rebuild on top of the latest main
+              git rebase --abort || true
+              git reset -q --hard origin/main
+              python3 scripts/build_site.py
+              git add -A xeber gun movzu assets sitemap.xml robots.txt feed.xml logo.png index.html
+              git diff --cached --quiet && exit 0
+              git -c user.name="site-build bot" -c user.email="actions@users.noreply.github.com" commit -q -m "site-build: update SEO pages"
+            fi
+            sleep $((i*5))
+          done
+          exit 1
