@@ -88,5 +88,87 @@
   ],
   "publish_at": "2026-11-28T15:45:00+04:00",
   "status": "pending"
+ },
+ {
+  "id": "2026-11-28-14",
+  "type": "story",
+  "caption": "",
+  "images": [
+   "https://pixelpressaz.github.io/ig/2026-11-28/14-story.jpg"
+  ],
+  "publish_at": "2026-11-28T16:30:00+04:00",
+  "status": "pending"
+ },
+ {
+  "id": "2026-11-28-11",
+  "type": "carousel",
+  "caption": "Azərbaycana 10 ayda 447,5 mln dollarlıq dərman idxal olunub: həcm 18,2% azalıb, xərc isə 5,4% artıb 💊\n\nRəsmi statistikaya görə, idxal olunan əczaçılıq məhsullarının qiyməti yanvar-sentyabrda 36,2% qalxıb. Bir tonun orta dəyəri 37 min dollara çatıb. İdxalın dörddə biri Türkiyənin payına düşür. Bu rəqəm aptekdəki qiymətlərin eyni faizlə artdığını göstərmir, çünki bahalı preparatların payı da böyüyüb.\n\nSiz son aylarda aptekdə bahalaşma hiss etmisiniz? 👇\n\nMənbə: Oxu.az, Ain.az (Aktual.az, Marja.az), Dövlət Gömrük Komitəsi\nFotolar: Zalasem1, LukaszKatlewa (CC BY 4.0); Bruno Corpet (Quoique) (CC BY-SA 3.0); Frankincense Diala (CC0) / Wikimedia Commons\n\n#azərbaycan #dərman #aptek #idxal #qiymətlər",
+  "images": [
+   "https://pixelpressaz.github.io/ig/2026-11-28/11-1.jpg",
+   "https://pixelpressaz.github.io/ig/2026-11-28/11-2.jpg",
+   "https://pixelpressaz.github.io/ig/2026-11-28/11-3.jpg",
+   "https://pixelpressaz.github.io/ig/2026-11-28/11-4.jpg",
+   "https://pixelpressaz.github.io/ig/2026-11-28/11-5.jpg"
+  ],
+  "publish_at": "2026-11-28T17:30:00+04:00",
+  "status": "pending"
+ },
+ {
+  "id": "2026-11-28-15",
+  "type": "story",
+  "caption": "",
+  "images": [
+   "https://pixelpressaz.github.io/ig/2026-11-28/15-story.jpg"
+  ],
+  "publish_at": "2026-11-28T18:30:00+04:00",
+  "status": "pending"
+ },
+ {
+  "id": "2026-11-28-12",
+  "type": "carousel",
+  "caption": "Azərbaycan 10 ayda 691,9 ton çay ixrac edib və 6,12 mln dollar qazanıb, amma çay idxalı bundan 12 dəfə çoxdur ☕\n\nYanvar-oktyabrda ölkəyə 12,6 min ton çay gətirilib və 74,6 mln dollar ödənilib. Yerli istehsal 9,4 min tona enib. İxrac olunan çayın kiloqramı orta hesabla 8,8 dollara, idxal olunan çay isə təxminən 5,9 dollara başa gəlir.\n\nSiz yerli çay içirsiniz, yoxsa xarici? 👇\n\nMənbə: Aqreqator.az (APA), Ain.az (Marja.az), Dövlət Gömrük Komitəsi\nFotolar: Subhrajyoti07, Pramod Karale (CC BY-SA 4.0); Interfase (CC BY-SA 3.0); Vyacheslav Argenberg (CC BY 4.0) / Wikimedia Commons\n\n#azərbaycan #çay #ixrac #lənkəran #idxal",
+  "images": [
+   "https://pixelpressaz.github.io/ig/2026-11-28/12-1.jpg",
+   "https://pixelpressaz.github.io/ig/2026-11-28/12-2.jpg",
+   "https://pixelpressaz.github.io/ig/2026-11-28/12-3.jpg",
+   "https://pixelpressaz.github.io/ig/2026-11-28/12-4.jpg",
+   "https://pixelpressaz.github.io/ig/2026-11-28/12-5.jpg"
+  ],
+  "publish_at": "2026-11-28T19:30:00+04:00",
+  "status": "pending"
+ },
+ {
+  "id": "2026-11-28-11r",
+  "type": "reel",
+  "caption": "Video | Azərbaycana 10 ayda 447,5 mln dollarlıq dərman idxal olunub: həcm 18,2% azalıb, xərc isə 5,4% artıb 💊\n\n• Dərman idxalı: 447,5 mln $\n• Həcm -18,2%, xərc +5,4%\n• İdxal qiyməti: +36,2%\n\nƏtraflı: profildəki karuselə bax. Yadda saxla və paylaş.\n\nMənbə: Oxu.az, Ain.az (Aktual.az, Marja.az), Dövlət Gömrük Komitəsi\nFotolar: Zalasem1, LukaszKatlewa (CC BY 4.0); Bruno Corpet (Quoique) (CC BY-SA 3.0); Frankincense Diala (CC0) / Wikimedia Commons\n\n#azərbaycan #dərman #aptek #idxal #qiymətlər",
+  "images": [],
+  "video": "https://pixelpressaz.github.io/ig/2026-11-28/11-reel.mp4",
+  "cover": "https://pixelpressaz.github.io/ig/2026-11-28/11-reel.jpg",
+  "publish_at": "2026-11-28T20:30:00+04:00",
+  "status": "pending"
+ },
+ {
+  "id": "2026-11-28-13",
+  "type": "carousel",
+  "caption": "BYD Quançjou avtosərgisində 900 km yürüşlü Whale elektrik miniveni təqdim edib 🚐⚡\n\nBatareya 10%-dən 97%-ə 9 dəqiqəyə dolur, 10%-dən 70%-ə isə 5 dəqiqə kifayətdir (istehsalçının rəqəmləri). Model plug-in hibrid versiyada da olacaq, satış Çində 2027-ci ilin I rübündə başlayır. Rəsmi qiymət hələ açıqlanmayıb, təxminən 300 min yuan (~45 min $) gözlənilir.\n\nSizcə, 9 dəqiqəlik şarj elektrikli avtomobillərə marağı artıracaqmı? 👇\n\nMənbə: Electrek, The Verge, BYD\nFotolar: 中少, Nickispeaki (CC BY-SA 4.0); Ivan Radic (CC BY 2.0); Yan lance (CC0) / Wikimedia Commons\n\n#dünya #byd #elektrikavtomobil #minivan #texnologiya",
+  "images": [
+   "https://pixelpressaz.github.io/ig/2026-11-28/13-1.jpg",
+   "https://pixelpressaz.github.io/ig/2026-11-28/13-2.jpg",
+   "https://pixelpressaz.github.io/ig/2026-11-28/13-3.jpg",
+   "https://pixelpressaz.github.io/ig/2026-11-28/13-4.jpg",
+   "https://pixelpressaz.github.io/ig/2026-11-28/13-5.jpg"
+  ],
+  "publish_at": "2026-11-28T21:45:00+04:00",
+  "status": "pending"
+ },
+ {
+  "id": "2026-11-28-16",
+  "type": "story",
+  "caption": "",
+  "images": [
+   "https://pixelpressaz.github.io/ig/2026-11-28/16-story.jpg"
+  ],
+  "publish_at": "2026-11-28T22:15:00+04:00",
+  "status": "pending"
  }
 ]
